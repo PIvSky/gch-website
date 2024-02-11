@@ -7,3 +7,19 @@
     --white-color: #FFFFFF;
     /*  */
 }
+
+@font-face {
+    font-family: 'Rudolf';
+    src: url('./assets/font/Rudolf-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  
+  body {
+    font-family: 'Rudolf';
+    /* basic colors */
+    color: var(--font-color);
+    background-color: var(--bg-color);
+  }
