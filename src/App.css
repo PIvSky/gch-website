@@ -16,6 +16,9 @@
     font-display: swap;
   }
   
+  html {
+    min-width: 375px;
+  }
   
   body {
     font-family: 'Rudolf';

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# notes of code
+notatnik.jsx
+notatnik.css
