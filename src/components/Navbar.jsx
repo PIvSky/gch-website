@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import style from '../styles/Navbar.module.css';
 import {useNavigate} from 'react-router-dom';
 import { HashLink as NavLink} from 'react-router-hash-link';
+import 'animate.css';
 
 const Navbar = () => {
 
@@ -63,7 +64,7 @@ const Navbar = () => {
             <div className={`${style.wrapper}`}>
                 <div className={`${style.navbar}`} ref={stickyRef}>
                     <div className={`${style.title_container}`}>
-                        <h1 onClick={navigateHandler} className={`${style.title_element}`}>grzeczni chłopcy</h1>
+                        <h1 onClick={navigateHandler} className={`${style.title_element} ${style.animate__animated} ${style.animate__flash}`}>grzeczni chłopcy</h1>
                     </div>
                     <div onClick={showNavbar} className={`${style.burger_box}`}>
                         <div className={`${style.burger_inner}`} onClick={menuTranformation} ref={menuRef}>
@@ -74,7 +75,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <nav className={`${style.nav}`} ref={navRef}>
-                    <ul className={`${style.nav_list}`}>
+                    <ul className={`${style.nav_list} ${style.animate__animated} ${style.animate__flash}`}>
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to='/#o-nas'>o nas</NavLink>
                         </li>
