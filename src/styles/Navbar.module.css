@@ -1,7 +1,9 @@
 @import 'animate.css';
 
 .wrapper {
-    position: relative;    
+    position: sticky;
+    top: 0;
+    height: 50px;    
 }
 
 .navbar {
@@ -9,17 +11,9 @@
     top: 0;
     height: 50px;
     background-color: var(--bg-color);
-    /* border-bottom: 1px solid #ccc; */
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 .title_container {
-    margin: 0 auto;
     padding: 8px 0;
     position: relative; /* Dodajemy pozycjonowanie względem rodzica */
     top: 15px
@@ -27,7 +21,6 @@
 
 .title_element {
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
@@ -41,7 +34,7 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    margin: auto;
+    margin: 0 auto;
     padding: 0px;
     top: 0;
     left: 0;
@@ -114,7 +107,7 @@ ul li:nth-child(3) {
     height: 5px;
     width: 100%;
     background: var(--font-color);
-    border-radius: 4.5px;
+    border-radius: 5px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -189,6 +182,7 @@ ul li:nth-child(3) {
         align-items: center;
         justify-content: space-between;
         margin: 0 auto;
+        height: 70px;    
     }
 
     .navbar {
@@ -198,35 +192,39 @@ ul li:nth-child(3) {
     .title_container {
         margin: 0 auto;
         padding: 0;
-        top: 0;
+        top: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     .title_element {
+        margin: 0 auto;
         position: relative;
         top: 0;
         left: 0;
         transform: none;
         z-index: 15;
-        padding: 20px;
+        padding: 21px;
+        padding-left: 50px;
     }
 
     .nav {
-        margin: 0;
         z-index: 5;
         transform: none;
         position: relative;
         height: 70px;
         display: flex;
+        align-content: center;
         flex-direction: row;
         justify-content: flex-end;
     }
 
     .nav_list {
         text-wrap: nowrap;
+        height: 70px;
         display: flex;
+        align-items: center;
         flex-direction: row;
         padding-right: 70px;
     }
@@ -237,6 +235,11 @@ ul li:nth-child(3) {
 }
 
 @media screen and (min-width: 1200px) {
+
+    .title_container {
+        padding-left: 70px;
+    }
+
     .nav_element {
         padding-inline: 40px;
     }

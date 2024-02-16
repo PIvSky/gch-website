@@ -39,30 +39,10 @@ const Navbar = () => {
         });
     }
 
-    // position stisky on scroll
-    useEffect(() => {
-        const handleScroll = () => {
-          const navbar = stickyRef.current;
-          
-          if (window.scrollY > navbar.offsetTop) {
-            navbar.classList.add(style.sticky);
-          } else {
-            navbar.classList.remove(style.sticky);
-          }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        // Clean up the event listener on component unmount
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-    
     return (
         <>
-            <div className={`${style.wrapper}`}>
-                <div className={`${style.navbar}`} ref={stickyRef}>
+            <div className={`${style.wrapper}`} ref={stickyRef}>
+                <div className={`${style.navbar}`}>
                     <div className={`${style.title_container}`}>
                         <h1 onClick={navigateHandler} className={`${style.title_element} ${style.animate__animated} ${style.animate__flash}`}>grzeczni chłopcy</h1>
                     </div>
