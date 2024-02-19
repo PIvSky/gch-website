@@ -13,4 +13,5 @@
     background-image: url("../assets/background/noisy-background.png");
     opacity: 0.18;
     z-index: 1000;
+    pointer-events: none;
 }

@@ -67,6 +67,7 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>
+                        {/* TODO: Add SM shortcuts */}
                     </ul>
                 </nav>
             </div>

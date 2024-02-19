@@ -7,6 +7,7 @@ const Main = () => {
             <img 
                 className={`${style.photo}`}
                 src={photo}
+                alt='main-photo'
             />
             {/* TODO: change smaller size of photo - resize resolution */}
         </div>

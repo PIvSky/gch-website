@@ -1,0 +1,44 @@
+.video_wrapper {
+    padding-top: 50px;
+}
+
+.video_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.title {
+    padding-bottom: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content {
+    padding-bottom: 10px;
+}
+
+iframe {
+    border: none;
+    border-radius: 2rem;
+    padding-block: 5px;
+    height: 300px;
+    width: 80vw;
+    margin: auto;
+}
+    
+@media screen and (min-width: 768px){
+
+    .works-video-container {
+        padding-top: 30px;
+    }
+
+    iframe {
+        border-radius: 3rem;
+        height: 600px;
+        width: 82vw;
+    }    
+}
