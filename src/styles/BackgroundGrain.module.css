@@ -1,0 +1,16 @@
+.div {
+    position: relative;
+}
+
+.grain {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/background/noisy-background.png");
+    opacity: 0.18;
+    z-index: 1000;
+}

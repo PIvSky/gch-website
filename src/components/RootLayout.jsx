@@ -6,17 +6,21 @@ import Footer from './Footer'
 import Contact from './Contact'
 import About from './About'
 import Slider from './Slider'
+import BackgroundGrain from './BackgroundGrain';
 
 const RootLayout = () => {
     return (
         <>
-            <Navbar/>
-            <Main/>
-            <About/>
-            <Music/>
-            <Slider/>
-            <Contact/>
-            <Footer/>
+            <BackgroundGrain>
+                <Navbar/>
+                <Main/>
+                <About/>
+                <Music/>
+                <Slider/>
+                <Contact/>
+                <Footer/>
+            </BackgroundGrain>
+            
         </>
     )
 }
