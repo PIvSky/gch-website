@@ -1,0 +1,14 @@
+.text {
+  font-size: 16px;
+  color: var(--font-color);
+}
+
+.text span {
+  z-index: -5;
+}
+
+@media screen and (min-width: 769px) {
+  .text {
+    font-size: 19px;
+  }
+}
