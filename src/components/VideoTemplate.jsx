@@ -1,6 +1,6 @@
 import style from '../styles/VideoTemplate.module.css';
 
-const VideoTemplate = ({title, content, src, key}) => {
+const VideoTemplate = ({title, content, src, id}) => {
     return (
         <>
             <div className={`${style.video_wrapper}`}>
@@ -9,7 +9,7 @@ const VideoTemplate = ({title, content, src, key}) => {
                 <div className={`${style.container}`}>
                         <iframe 
                             title={`Video of + ${title}`}
-                            key={key}
+                            key={id}
                             width="300" 
                             height="300" 
                             src={src} allowfullscreen> 

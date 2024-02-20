@@ -1,5 +1,5 @@
-.video_wrapper {
-    padding-top: 50px;
+.video_wrapper:nth-child(2) {
+    padding-top: 30px;
 }
 
 .video_container {

@@ -7,19 +7,18 @@ const content = 'Najlepsze przeboje, chórki, choreografia, styl, dancing, szyk,
 const About = () => {
     return (
         <section className={`${style.wrapper}`} id='o-nas'>
-            <div className={`${style.photo_container}`}>   
+            {/* <div className={`${style.photo_container}`}>   
                 <div className={`${style.photo_frame}`}>
                     <img
                         className={`${style.photo}`} 
                         src={photo} 
                         alt="about-photo" />
                 </div>
-            </div>
+            </div> */}
             <div className={`${style.content_container}`}>
                 <h2 className={`${style.about_title}`}>PIOSENKI, KTÓRE KAŻDY ZNA, ALE NIKT NIE SŁYSZAŁ.</h2>
                 <TypewriterAnimation content={content}/>
             </div>
-            
         </section>
     )
 }
