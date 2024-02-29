@@ -1,0 +1,36 @@
+.wrapper {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wrapper button {
+    position: absolute;
+    background: none;
+    border: none
+}
+
+.arrow_prev {
+    top: 50%;
+    left: 10px;
+    scale: 1.2;
+}
+
+.arrow_next {
+    top: 50%;
+    right: 10px;
+    scale: 1.2;
+}
+
+.arrow_prev:active, .arrow_next:active {
+    scale: 1.5;
+}
