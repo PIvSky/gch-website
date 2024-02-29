@@ -10,7 +10,28 @@ import car5 from '../assets/photo/car5.webp';
 import arrowPrev from '../assets/buttons/left-arrow.png';
 import arrowNext from '../assets/buttons/right-arrow.png';
 
-const carouselImages = [car1,car2,car3,car4,car5]
+const carouselImages = [
+    {
+        url: car1,
+        name: 'Radek'
+    },
+    {
+        url: car2,
+        name: 'Piotr'
+    },
+    {
+        url: car3,
+        name: 'Michał'
+    },
+    {
+        url: car4,
+        name: 'Łukasz'
+    },
+    {
+        url: car5,
+        name: 'Grześ'
+    }
+]
 
 const Slider = () => {
 
@@ -36,7 +57,8 @@ const Slider = () => {
         <>
         <div className={`${style.wrapper}`}>
             <button onClick={showPrevImage} className={`${style.arrow_prev}`}><img alt='arrow-prev' src={arrowPrev} /></button>
-            <img className={`${style.image}`} src={carouselImages[imageIndex]}/>
+            <span className={`${style.image_name}`}>{carouselImages[imageIndex].name}</span>
+            <img className={`${style.image}`} src={carouselImages[imageIndex].url}/>
             <button onClick={showNextImage} className={`${style.arrow_next}`}><img alt='arrow-next' src={arrowNext} /></button>
         </div>
     </>

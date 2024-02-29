@@ -13,6 +13,17 @@
     display: block;
 }
 
+.image_name {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .wrapper button {
     position: absolute;
     background: none;
