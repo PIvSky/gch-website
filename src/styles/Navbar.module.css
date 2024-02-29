@@ -206,6 +206,7 @@ ul li:nth-child(3) {
         justify-content: space-between;
         margin: 0 auto;
         height: 70px;    
+        z-index: 700;
     }
 
     .navbar {
