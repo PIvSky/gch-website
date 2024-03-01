@@ -12,30 +12,35 @@ import arrowNext from '../assets/buttons/right-arrow.png';
 
 const carouselImages = [
     {
-        url: car1,
-        name: 'Radek'
+        src: car1,
+        name: 'Radek',
+        desc: 'Radek         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint dolorum nemo, ratione commodi tempore minus necessitatibus porro distinctio pariatur ducimus incidunt non, iste ipsam placeat consequuntur excepturi veniam! Illum?'
     },
     {
-        url: car2,
-        name: 'Piotr'
+        src: car2,
+        name: 'Piotr',
+        desc: 'Piotr         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint dolorum nemo, ratione commodi tempore minus necessitatibus porro distinctio pariatur ducimus incidunt non, iste ipsam placeat consequuntur excepturi veniam! Illum?'
     },
     {
-        url: car3,
-        name: 'Michał'
+        src: car3,
+        name: 'Michał',
+        desc: 'Michał         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint dolorum nemo, ratione commodi tempore minus necessitatibus porro distinctio pariatur ducimus incidunt non, iste ipsam placeat consequuntur excepturi veniam! Illum?'
     },
     {
-        url: car4,
-        name: 'Łukasz'
+        src: car4,
+        name: 'Łukasz',
+        desc: 'Łukasz         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint dolorum nemo, ratione commodi tempore minus necessitatibus porro distinctio pariatur ducimus incidunt non, iste ipsam placeat consequuntur excepturi veniam! Illum?'
     },
     {
-        url: car5,
-        name: 'Grześ'
+        src: car5,
+        name: 'Grześ',
+        desc: 'Grześ         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint dolorum nemo, ratione commodi tempore minus necessitatibus porro distinctio pariatur ducimus incidunt non, iste ipsam placeat consequuntur excepturi veniam! Illum?'
     }
 ]
 
 const Slider = () => {
 
-    const [imageIndex, setImageIndex] = useState(0);
+    const [imageIndex, setImageIndex] = useState(4);
 
     const showPrevImage = () => {
         if (imageIndex === 0) {
@@ -53,15 +58,35 @@ const Slider = () => {
         }
     };
 
+    const handleLeftGalleryClick = (index) => {
+        setImageIndex(index);
+    };
+
     return (
-        <>
         <div className={`${style.wrapper}`}>
-            <button onClick={showPrevImage} className={`${style.arrow_prev}`}><img alt='arrow-prev' src={arrowPrev} /></button>
-            <span className={`${style.image_name}`}>{carouselImages[imageIndex].name}</span>
-            <img className={`${style.image}`} src={carouselImages[imageIndex].url}/>
-            <button onClick={showNextImage} className={`${style.arrow_next}`}><img alt='arrow-next' src={arrowNext} /></button>
+            <div className={`${style.left_gallery}`}>
+                {carouselImages.map((image,index) => (
+                    <div className={`${style.left_gallery_frame}`} key={index}>
+                        <img 
+                            alt={image.name} 
+                            src={image.src} 
+                            className={`${style.left_gallery_photo}`}
+                            onClick={() => handleLeftGalleryClick(index)}
+                            ></img>
+                    </div>
+                ))}
+            </div>
+            <div className={`${style.image_wrapper}`}>
+                <button onClick={showPrevImage} className={`${style.arrow_prev}`}><img alt='arrow-prev' src={arrowPrev} /></button>
+                <span className={`${style.image_name}`}>{carouselImages[imageIndex].name}</span>
+                <img className={`${style.image}`} src={carouselImages[imageIndex].src}/>
+                <button onClick={showNextImage} className={`${style.arrow_next}`}><img alt='arrow-next' src={arrowNext} /></button>
+            </div>
+            <div className={`${style.right_gallery}`}>
+                <p>{carouselImages[imageIndex].desc}</p>
+                {/* TODO: change content of members bios */}
+            </div>
         </div>
-    </>
     )
 }
 
