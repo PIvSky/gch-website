@@ -1,5 +1,8 @@
 import { useRef, useEffect } from 'react';
 import style from '../styles/Navbar.module.css';
+import instagram_icon from '../assets/icons/instagram.png';
+import facebook_icon from '../assets/icons/facebook.png';
+import youtube_icon from '../assets/icons/youtube.png';
 import {useNavigate} from 'react-router-dom';
 import { HashLink as NavLink} from 'react-router-hash-link';
 import 'animate.css';
@@ -67,6 +70,11 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>
+                        <div className={`${style.icons_container}`}>
+                            <a href='https://www.instagram.com/grzecznichlopcy/'><img className={`${style.instagram_icon}`} src={instagram_icon}/></a>
+                            <a href='https://www.facebook.com/grzecznichlopcyband'><img className={`${style.facebook_icon}`} src={facebook_icon}/></a>
+                            <a href='https://www.youtube.com/@GChProductionPL'><img className={`${style.youtube_icon}`} src={youtube_icon}/></a>
+                        </div>
                         {/* TODO: Add SM shortcuts */}
                     </ul>
                 </nav>

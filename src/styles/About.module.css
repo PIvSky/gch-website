@@ -14,9 +14,12 @@
 
 .content_container  {
     border: 2px solid black;
-    
     margin: 0 auto;
     max-width: 82vw;
+}
+
+.content_container span {
+    text-align: justify;
 }
 
 @media screen and (min-width: 768px){

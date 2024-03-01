@@ -9,3 +9,33 @@
     height: auto;
     width: 100%;
 }
+
+.icons_container {
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+
+    .photo_container {
+        position: relative;
+    }
+    .icons_container {
+        position: absolute;
+        top: 20%;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .instagram_icon {
+        padding: 5px;
+    }
+    
+    .facebook_icon {
+        padding: 5px;
+    }
+    
+    .youtube_icon {
+        padding: 5px;
+    }
+}
