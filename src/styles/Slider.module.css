@@ -126,10 +126,10 @@
         width: 100%;
         height: auto;
         border-radius: 20px;
+        transition: 500ms ease-in-out;
     }
 
     .left_gallery_photo:hover {
-        transition: 500ms ease-in-out;
         scale: 1.06;
     }
 }
