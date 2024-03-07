@@ -49,7 +49,7 @@ const Contact = () => {
                 <h2 className={`${style.contact_title}`}>skontaktuj się</h2>
                 <div className={`${style.contact_container}`}>
                     <form ref={form} onSubmit={sendEmail} className={`${style.contact_form}`}>
-                        <label for='contact_name'>imię</label>
+                        <label for='contact_name'>imię i nazwisko</label>
                         <input id='contact_name' type="text" name="contact_name" />
                         <label for='contact_email'>adres email</label>
                         <input id='contact_email' type="email" name="contact_email" />
