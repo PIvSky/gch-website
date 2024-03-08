@@ -8,17 +8,34 @@
     display: none;
 } */
 
-.about_title {
-    text-decoration: underline;
-}
-
 .content_container  {
     border: 2px solid black;
     margin: 0 auto;
     max-width: 82vw;
 }
 
+.content_container h2 {
+    display: inline-block;
+    text-decoration: underline;
+    min-height: 90px;
+    /* text-align: start; */
+}
+
+
+.content_container div {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
 .content_container span {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.content_container p {
+    padding-top: 10px;
     text-align: justify;
 }
 
@@ -32,9 +49,13 @@
         border-left: none;
         border-right: none;
     }
+    
+    .content_container h2{
+        min-height: 45px;
+    }
 
-    .content_container span {
-        display: block;
+    .content_container p {
+        /* display: block; */
         column-count: 2;
         column-rule-style: solid;
     }
