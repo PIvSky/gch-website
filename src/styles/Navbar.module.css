@@ -4,6 +4,7 @@
     position: sticky;
     top: 0;
     height: 50px;    
+    z-index: 700;
 }
 
 .navbar {
@@ -71,6 +72,25 @@ li a {
 
 ul li:nth-child(3) {
     cursor: pointer;
+}
+
+.icons_container {
+    padding: 20px;
+}
+
+.instagram_icon {
+    padding-inline: 10px;
+    scale: 0.8;
+}
+
+.facebook_icon {
+    padding-inline: 10px;
+    scale: 0.8;
+}
+
+.youtube_icon {
+    padding-inline: 10px;
+    scale: 1.1;
 }
 
 /* 
@@ -177,6 +197,9 @@ ul li:nth-child(3) {
 
 @media screen and (min-width: 769px) {
 
+    .icons_container {
+        display: none;
+    }
     .wrapper {
         display: flex;
         flex-direction: row;

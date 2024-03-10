@@ -1,0 +1,143 @@
+.contact_wrapper {
+    border: 2px solid var(--font-color);
+    margin: 0 auto;
+    max-width: 82svw;
+}
+
+.contact_title {
+    font-size: 2rem;
+    padding-block: 5px;
+}
+
+.contact_form {
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid var(--font-color);
+    border-inline: none;
+}
+
+.contact_form label{
+    padding: 5px 15px 5px;
+    display: block;
+    text-align: start;
+}
+
+.contact_form label:nth-child(1){
+    padding-top: 15px;
+}
+
+.contact_form input{
+    padding: 5px 10px 5px;
+    margin-block: 10px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: start;
+    font-family: 'Rudolf';
+    color: var(--font-color);
+    background-color: var(--gray-dark-color);
+}
+
+.contact_form input:invalid {
+    border-bottom: 2px solid rgb(255, 81, 0);
+}
+
+.contact_form input:valid {
+    border-bottom: 2px solid green;
+}
+
+.contact_form textarea{
+    padding: 5px 10px 5px;
+    margin-top: 10px;
+    width: 90%;
+    min-height: 90px;
+    border: none;
+    border-radius: 5px;
+    text-align: start;
+    font-family: 'Rudolf';
+    color: var(--font-color);
+    background-color: var(--gray-dark-color);
+}
+
+.contact_form textarea:focus {
+    border-color: var(--font-color);
+}
+
+.contact_form textarea:invalid {
+    border-bottom: 2px solid rgb(255, 81, 0);
+}
+
+.contact_form textarea:valid {
+    border-bottom: 2px solid green;
+}
+
+.contact_form button {
+    display: block;
+    margin: 5px auto;
+    padding: 3px 10px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--font-color);
+    border-radius: 1px;
+    font-family: 'Rudolf';
+    color: var(--font-color);
+    font-size: 1rem;
+}
+
+.contact_form button:active {
+    border-color: var(--gray-dark-color);
+    opacity: 0.7;
+}
+
+.email_container, .phone_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 15px;
+}
+
+.phone_container {
+    padding-top: 0px;
+}
+
+.email_container img{
+    height: 30px;
+    padding: 10px;
+}
+
+.phone_container img{
+    height: 30px;
+    padding: 10px;
+}
+
+.phone_person {
+    margin: 15px;
+}
+
+@media screen and (min-width: 768px){
+    .contact_wrapper {
+        border-left: none;
+        border-right: none;
+    }
+
+    .contact_title {
+        border-bottom: 2px solid var(--font-color);
+    }
+
+    .contact_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact_form,
+    .contact_data {
+        width: 50%;
+    }
+
+    .contact_form {
+        border: none;
+        border-right: 2px solid var(--font-color);
+    }
+}
