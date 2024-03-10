@@ -74,6 +74,10 @@ ul li:nth-child(3) {
     cursor: pointer;
 }
 
+.nav_download {
+    transition: 500ms ease-in-out;
+}
+
 .icons_container {
     padding: 20px;
 }

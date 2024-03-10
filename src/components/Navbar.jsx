@@ -1,10 +1,11 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import style from '../styles/Navbar.module.css';
 import instagram_icon from '../assets/icons/instagram.png';
 import facebook_icon from '../assets/icons/facebook.png';
 import youtube_icon from '../assets/icons/youtube.png';
 import {useNavigate} from 'react-router-dom';
 import { HashLink as NavLink} from 'react-router-hash-link';
+import riderPDF from '../assets/files/grzeczni_chlopcy_rider.pdf'
 import 'animate.css';
 
 const Navbar = () => {
@@ -13,6 +14,7 @@ const Navbar = () => {
     const menuRef = useRef();
     const navigateHome = useNavigate()
     const stickyRef = useRef(null);
+    const [isDownloadVisible, setDownloadVisible] = useState(false);
 
     // Hamburger menu action 
     const menuTranformation = () => {
@@ -42,6 +44,26 @@ const Navbar = () => {
         });
     }
 
+    const showOptions = () => {
+        setDownloadVisible(!isDownloadVisible);
+    };
+
+    const downloadRider = () => {
+        fetch(riderPDF).then((response) => {
+            response.blob().then((blob) => {
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+                     
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "piotr-iwanski-cv.pdf";
+                alink.click();
+            });
+        });
+    }
+
     return (
         <>
             <div className={`${style.wrapper}`} ref={stickyRef}>
@@ -65,8 +87,14 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to='/#muzyka'>muzyka</NavLink>
                         </li>
-                        <li className={`${style.nav_element}`} onClick={closeNavbar}>pobierz
+                        <li className={`${style.nav_element}`} onClick={showOptions}>pobierz
                         </li>
+                        {isDownloadVisible && (
+                            <div className={`${style.nav_download} ${style.animate__animated} ${style.animate__fadeInRight}`}>
+                                <p onClick={showOptions}>press kit</p>
+                                <p onClick={downloadRider}>rider</p>
+                            </div>
+                        )}
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>
@@ -75,7 +103,6 @@ const Navbar = () => {
                             <a href='https://www.facebook.com/grzecznichlopcyband'><img className={`${style.facebook_icon}`} src={facebook_icon}/></a>
                             <a href='https://www.youtube.com/@GChProductionPL'><img className={`${style.youtube_icon}`} src={youtube_icon}/></a>
                         </div>
-                        {/* TODO: Add SM shortcuts */}
                     </ul>
                 </nav>
             </div>
