@@ -5,7 +5,6 @@ import facebook_icon from '../assets/icons/facebook.png';
 import youtube_icon from '../assets/icons/youtube.png';
 import {useNavigate} from 'react-router-dom';
 import { HashLink as NavLink} from 'react-router-hash-link';
-import riderPDF from '../assets/files/grzeczni_chlopcy_rider.pdf'
 import 'animate.css';
 
 const Navbar = () => {
@@ -49,7 +48,7 @@ const Navbar = () => {
     };
 
     const downloadRider = () => {
-        fetch(riderPDF).then((response) => {
+        fetch('/assets/files/grzeczni_chlopcy_rider.pdf').then((response) => {
             response.blob().then((blob) => {
                 // Creating new object of PDF file
                 const fileURL =
@@ -58,7 +57,23 @@ const Navbar = () => {
                 // Setting various property values
                 let alink = document.createElement("a");
                 alink.href = fileURL;
-                alink.download = "piotr-iwanski-cv.pdf";
+                alink.download = "Grzeczni Chłopcy - Rider.pdf";
+                alink.click();
+            });
+        });
+    }
+
+    const downloadPressKit = () => {
+        fetch('/assets/files/grzeczni_chlopcy_press_kit.zip').then((response) => {
+            response.blob().then((blob) => {
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+                     
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "Grzeczni Chłopcy - Press Kit.zip";
                 alink.click();
             });
         });
@@ -91,7 +106,7 @@ const Navbar = () => {
                         </li>
                         {isDownloadVisible && (
                             <div className={`${style.nav_download} ${style.animate__animated} ${style.animate__fadeInRight}`}>
-                                <p onClick={showOptions}>press kit</p>
+                                <p onClick={downloadPressKit}>press kit</p>
                                 <p onClick={downloadRider}>rider</p>
                             </div>
                         )}
