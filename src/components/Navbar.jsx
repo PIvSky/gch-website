@@ -54,7 +54,7 @@ const Navbar = () => {
         setTimeout(() => {
             dropdownRef.current.classList.toggle(style.show);
             dropdownRef.current.classList.remove(style.animate__fadeOutLeft)
-        }, 1000)
+        }, 600)
     }
 
     const downloadRider = () => {
@@ -114,7 +114,7 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to='/#muzyka'>muzyka</NavLink>
                         </li>
-                        <li className={`${style.nav_element}`} onClick={showDropdown}>pobierz
+                        <li className={`${style.nav_element}`} onClick={() => {showDropdown(); closeDropdown();}}>pobierz
                             <ul ref={dropdownRef} onClick={closeDropdown} className={`${style.nav_dropdown} ${style.animate__animated} ${style.animate__fadeInRight}`}>
                                 <li onClick={() => {downloadPressKit(); closeDropdown();} }>press kit</li>
                                 <li onClick={() => {downloadRider(); closeDropdown(); }}>rider</li>
