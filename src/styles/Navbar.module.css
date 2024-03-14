@@ -83,6 +83,7 @@ ul li:nth-child(3) {
 
 .nav_dropdown li {
     cursor: pointer;
+    padding-top: 5px;
 }
 
 .show {
@@ -275,6 +276,20 @@ ul li:nth-child(3) {
         padding-right: 70px;
     }
 
+    .nav_element {
+        position: relative;
+    }
+
+    .nav_dropdown {
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        background-color: var(--bg-color);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 5px;
+    }
+
     .burger_box {
         display: none;
     }
@@ -288,5 +303,9 @@ ul li:nth-child(3) {
 
     .nav_element {
         padding-inline: 40px;
+    }
+
+    .nav_dropdown {
+        left: 20%;
     }
 }
