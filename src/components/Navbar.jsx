@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef , useEffect} from 'react';
 import style from '../styles/Navbar.module.css';
 import instagram_icon from '../assets/icons/instagram.png';
 import facebook_icon from '../assets/icons/facebook.png';
@@ -63,7 +63,6 @@ const Navbar = () => {
                 // Creating new object of PDF file
                 const fileURL =
                     window.URL.createObjectURL(blob);
-                     
                 // Setting various property values
                 let alink = document.createElement("a");
                 alink.href = fileURL;
@@ -80,7 +79,6 @@ const Navbar = () => {
                 // Creating new object of PDF file
                 const fileURL =
                     window.URL.createObjectURL(blob);
-                     
                 // Setting various property values
                 let alink = document.createElement("a");
                 alink.href = fileURL;
