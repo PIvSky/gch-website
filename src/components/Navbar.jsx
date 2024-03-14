@@ -13,7 +13,7 @@ const Navbar = () => {
     const menuRef = useRef();
     const navigateHome = useNavigate()
     const stickyRef = useRef(null);
-    const [isDownloadVisible, setDownloadVisible] = useState(false);
+    const dropdownRef = useRef(null);
 
     // Hamburger menu action 
     const menuTranformation = () => {
@@ -21,12 +21,12 @@ const Navbar = () => {
     }
 
     const showNavbar = () => {
-        const listItems = navRef.current.querySelectorAll('li');
-        listItems.forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.add(style.slideInLeft);
-            }, index * 250);
-        });
+        // const listItems = navRef.current.querySelectorAll('li');
+        // listItems.forEach((item, index) => {
+        //     setTimeout(() => {
+        //         item.classList.add(style.slideInLeft);
+        //     }, index * 250);
+        // });
         navRef.current.classList.toggle(style.nav_show);
     };
 
@@ -43,9 +43,19 @@ const Navbar = () => {
         });
     }
 
-    const showOptions = () => {
-        setDownloadVisible(!isDownloadVisible);
+    // Download dropdown
+    const showDropdown = () => {
+        dropdownRef.current.classList.toggle(style.show);
     };
+
+    const closeDropdown = () => {
+        dropdownRef.current.classList.add(style.animate__fadeOutLeft)
+        dropdownRef.current.classList.toggle(style.show);
+        setTimeout(() => {
+            dropdownRef.current.classList.toggle(style.show);
+            dropdownRef.current.classList.remove(style.animate__fadeOutLeft)
+        }, 1000)
+    }
 
     const downloadRider = () => {
         fetch('/assets/files/grzeczni_chlopcy_rider.pdf').then((response) => {
@@ -61,6 +71,7 @@ const Navbar = () => {
                 alink.click();
             });
         });
+        navRef.current.classList.toggle(style.nav_show);
     }
 
     const downloadPressKit = () => {
@@ -77,6 +88,7 @@ const Navbar = () => {
                 alink.click();
             });
         });
+        navRef.current.classList.toggle(style.nav_show);
     }
 
     return (
@@ -102,14 +114,12 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to='/#muzyka'>muzyka</NavLink>
                         </li>
-                        <li className={`${style.nav_element}`} onClick={showOptions}>pobierz
+                        <li className={`${style.nav_element}`} onClick={showDropdown}>pobierz
+                            <ul ref={dropdownRef} onClick={closeDropdown} className={`${style.nav_dropdown} ${style.animate__animated} ${style.animate__fadeInRight}`}>
+                                <li onClick={() => {downloadPressKit(); closeDropdown();} }>press kit</li>
+                                <li onClick={() => {downloadRider(); closeDropdown(); }}>rider</li>
+                            </ul>
                         </li>
-                        {isDownloadVisible && (
-                            <div className={`${style.nav_download} ${style.animate__animated} ${style.animate__fadeInRight}`}>
-                                <p onClick={downloadPressKit}>press kit</p>
-                                <p onClick={downloadRider}>rider</p>
-                            </div>
-                        )}
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>

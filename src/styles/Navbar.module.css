@@ -74,8 +74,19 @@ ul li:nth-child(3) {
     cursor: pointer;
 }
 
-.nav_download {
-    transition: 500ms ease-in-out;
+.nav_dropdown {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.nav_dropdown li {
+    cursor: pointer;
+}
+
+.show {
+    display: block;
 }
 
 .icons_container {
@@ -200,6 +211,13 @@ ul li:nth-child(3) {
 }
 
 @media screen and (min-width: 769px) {
+
+    .nav_download {
+        transition: 500ms ease-in-out;
+        position: absolute;
+        top: 48vh;
+        left: 67%;
+    }
 
     .icons_container {
         display: none;
