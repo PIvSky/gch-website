@@ -122,9 +122,33 @@ const Navbar = () => {
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>
                         <div className={`${style.icons_container}`}>
-                            <a href='https://www.instagram.com/grzecznichlopcy/'><img className={`${style.instagram_icon}`} src={instagram_icon} alt='sm-icon'/></a>
-                            <a href='https://www.facebook.com/grzecznichlopcyband'><img className={`${style.facebook_icon}`} src={facebook_icon} alt='sm-icon'/></a>
-                            <a href='https://www.youtube.com/@GChProductionPL'><img className={`${style.youtube_icon}`} src={youtube_icon} alt='sm-icon'/></a>
+                            <a href='https://www.instagram.com/grzecznichlopcy/'>
+                                <img 
+                                className={`${style.instagram_icon}`}
+                                 src={instagram_icon} 
+                                 alt='sm-icon'
+                                 width='25px'
+                                 height='auto'
+                                 />
+                            </a>
+                            <a href='https://www.facebook.com/grzecznichlopcyband'>
+                                <img 
+                                className={`${style.facebook_icon}`} 
+                                src={facebook_icon} 
+                                alt='sm-icon'
+                                width='25px'
+                                height='auto'
+                                />
+                            </a>
+                            <a href='https://www.youtube.com/@GChProductionPL'>
+                                <img 
+                                className={`${style.youtube_icon}`} 
+                                src={youtube_icon} 
+                                alt='sm-icon'
+                                width='32px'
+                                height='auto'
+                                />
+                            </a>
                         </div>
                     </ul>
                 </nav>

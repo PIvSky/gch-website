@@ -92,6 +92,8 @@ ul li:nth-child(3) {
 
 .icons_container {
     padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .instagram_icon {
