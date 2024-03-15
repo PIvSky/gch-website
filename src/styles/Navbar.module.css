@@ -206,9 +206,9 @@ ul li:nth-child(3) {
 
 /* ANIMATIONS */
 .animate__flash {
-    animation-duration: 2s; /* Czas trwania animacji */
-    animation-iteration-count: 1; /* Liczba powtórzeń */
-    animation-delay: 1s; /* Opóźnienie między powtórzeniami */
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
 }
 
 @media screen and (min-width: 769px) {
