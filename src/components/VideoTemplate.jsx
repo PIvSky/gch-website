@@ -8,6 +8,7 @@ const VideoTemplate = ({title, content, src, id}) => {
                 <p className={`${style.content}`}>{content}</p>
                 <div className={`${style.container}`}>
                         <iframe 
+                            loading="lazy"
                             title={`Video of + ${title}`}
                             key={id}
                             width="300" 

@@ -1,5 +1,8 @@
-import { useRef, useEffect } from 'react';
+import { useRef , useEffect} from 'react';
 import style from '../styles/Navbar.module.css';
+import instagram_icon from '../assets/icons/instagram.png';
+import facebook_icon from '../assets/icons/facebook.png';
+import youtube_icon from '../assets/icons/youtube.png';
 import {useNavigate} from 'react-router-dom';
 import { HashLink as NavLink} from 'react-router-hash-link';
 import 'animate.css';
@@ -10,6 +13,7 @@ const Navbar = () => {
     const menuRef = useRef();
     const navigateHome = useNavigate()
     const stickyRef = useRef(null);
+    const dropdownRef = useRef(null);
 
     // Hamburger menu action 
     const menuTranformation = () => {
@@ -17,12 +21,12 @@ const Navbar = () => {
     }
 
     const showNavbar = () => {
-        const listItems = navRef.current.querySelectorAll('li');
-        listItems.forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.add(style.slideInLeft);
-            }, index * 250);
-        });
+        // const listItems = navRef.current.querySelectorAll('li');
+        // listItems.forEach((item, index) => {
+        //     setTimeout(() => {
+        //         item.classList.add(style.slideInLeft);
+        //     }, index * 250);
+        // });
         navRef.current.classList.toggle(style.nav_show);
     };
 
@@ -37,6 +41,52 @@ const Navbar = () => {
             top: 0,
             behavior: 'smooth'
         });
+    }
+
+    // Download dropdown
+    const showDropdown = () => {
+        dropdownRef.current.classList.toggle(style.show);
+    };
+
+    const closeDropdown = () => {
+        dropdownRef.current.classList.add(style.animate__fadeOutLeft)
+        dropdownRef.current.classList.toggle(style.show);
+        setTimeout(() => {
+            dropdownRef.current.classList.toggle(style.show);
+            dropdownRef.current.classList.remove(style.animate__fadeOutLeft)
+        }, 600)
+    }
+
+    const downloadRider = () => {
+        fetch('/assets/files/grzeczni_chlopcy_rider.pdf').then((response) => {
+            response.blob().then((blob) => {
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "Grzeczni Chłopcy - Rider.pdf";
+                alink.click();
+            });
+        });
+        navRef.current.classList.toggle(style.nav_show);
+    }
+
+    const downloadPressKit = () => {
+        fetch('/assets/files/grzeczni_chlopcy_press_kit.zip').then((response) => {
+            response.blob().then((blob) => {
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "Grzeczni Chłopcy - Press Kit.zip";
+                alink.click();
+            });
+        });
+        navRef.current.classList.toggle(style.nav_show);
     }
 
     return (
@@ -62,12 +112,44 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to='/#muzyka'>muzyka</NavLink>
                         </li>
-                        <li className={`${style.nav_element}`} onClick={closeNavbar}>pobierz
+                        <li className={`${style.nav_element}`} onClick={() => {showDropdown(); closeDropdown();}}>pobierz
+                            <ul ref={dropdownRef} onClick={closeDropdown} className={`${style.nav_dropdown} ${style.animate__animated} ${style.animate__fadeInRight}`}>
+                                <li onClick={() => {downloadPressKit(); closeDropdown();} }>press kit</li>
+                                <li onClick={() => {downloadRider(); closeDropdown(); }}>rider</li>
+                            </ul>
                         </li>
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>
-                        {/* TODO: Add SM shortcuts */}
+                        <div className={`${style.icons_container}`}>
+                            <a href='https://www.instagram.com/grzecznichlopcy/'>
+                                <img 
+                                className={`${style.instagram_icon}`}
+                                 src={instagram_icon} 
+                                 alt='sm-icon'
+                                 width='25px'
+                                 height='auto'
+                                 />
+                            </a>
+                            <a href='https://www.facebook.com/grzecznichlopcyband'>
+                                <img 
+                                className={`${style.facebook_icon}`} 
+                                src={facebook_icon} 
+                                alt='sm-icon'
+                                width='25px'
+                                height='auto'
+                                />
+                            </a>
+                            <a href='https://www.youtube.com/@GChProductionPL'>
+                                <img 
+                                className={`${style.youtube_icon}`} 
+                                src={youtube_icon} 
+                                alt='sm-icon'
+                                width='32px'
+                                height='auto'
+                                />
+                            </a>
+                        </div>
                     </ul>
                 </nav>
             </div>

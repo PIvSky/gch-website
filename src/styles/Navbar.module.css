@@ -4,6 +4,7 @@
     position: sticky;
     top: 0;
     height: 50px;    
+    z-index: 700;
 }
 
 .navbar {
@@ -15,7 +16,7 @@
 
 .title_container {
     padding: 8px 0;
-    position: relative; /* Dodajemy pozycjonowanie względem rodzica */
+    position: relative; 
     top: 15px
 }
 
@@ -25,7 +26,7 @@
     transform: translate(-50%, -50%);
     z-index: 15;
     font-size: 1.5rem;
-    white-space: nowrap; /* Poprawna właściwość dla braku zawijania tekstu */
+    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -71,6 +72,40 @@ li a {
 
 ul li:nth-child(3) {
     cursor: pointer;
+}
+
+.nav_dropdown {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.nav_dropdown li {
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.show {
+    display: block;
+}
+
+.icons_container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.instagram_icon {
+    padding-inline: 10px;
+}
+
+.facebook_icon {
+    padding-inline: 10px;
+}
+
+.youtube_icon {
+    padding-inline: 10px;
 }
 
 /* 
@@ -177,6 +212,9 @@ ul li:nth-child(3) {
 
 @media screen and (min-width: 769px) {
 
+    .icons_container {
+        display: none;
+    }
     .wrapper {
         display: flex;
         flex-direction: row;
@@ -230,6 +268,20 @@ ul li:nth-child(3) {
         padding-right: 70px;
     }
 
+    .nav_element {
+        position: relative;
+    }
+
+    .nav_dropdown {
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        background-color: var(--bg-color);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 5px;
+    }
+
     .burger_box {
         display: none;
     }
@@ -243,5 +295,9 @@ ul li:nth-child(3) {
 
     .nav_element {
         padding-inline: 40px;
+    }
+
+    .nav_dropdown {
+        left: 20%;
     }
 }

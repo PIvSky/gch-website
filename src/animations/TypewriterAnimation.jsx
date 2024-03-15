@@ -7,10 +7,10 @@ const TypewriterAnimation = ({ content }) => {
         <div className={`${style.text}`}>
             <Typewriter
                 words={[content]}
-                typeSpeed={25}
-                erase={false}
-                cursor={true}
-                cursorBlinking={true}
+                loop={true}
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={2000}
             />
         </div>
     );
