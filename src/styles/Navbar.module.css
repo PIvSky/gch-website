@@ -96,17 +96,17 @@ ul li:nth-child(3) {
 
 .instagram_icon {
     padding-inline: 10px;
-    scale: 0.8;
+    /* scale: 0.8; */
 }
 
 .facebook_icon {
     padding-inline: 10px;
-    scale: 0.8;
+    /* scale: 0.8; */
 }
 
 .youtube_icon {
     padding-inline: 10px;
-    scale: 1.1;
+    /* scale: 1.1; */
 }
 
 /* 
