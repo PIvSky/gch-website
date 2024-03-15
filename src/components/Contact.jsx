@@ -34,6 +34,7 @@ const Contact = () => {
             // 'service_jfqmbbc', 
             // 'template_2uoubuu',
             // form.current, 
+            // TODO: wyłącz komentarz aby działał mejler
             {
             publicKey: 'ulJtPOUQPTfSAUx5o',
             })
@@ -46,11 +47,8 @@ const Contact = () => {
             },
         );
     };
-
-     /* VALIDATION FUNCTIONS */
-
-    useEffect(() => {
-    }, )
+    // TODO: czyszczenie formularza po wysłaniu
+    // TODO: pop up po wysłaniu, może być alert albo szybki popup z WebDevSimplify
 
     return (
         <>
