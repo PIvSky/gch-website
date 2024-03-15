@@ -121,7 +121,8 @@ const Navbar = () => {
                         <li className={`${style.nav_element}`} onClick={closeNavbar}>
                             <NavLink smooth to="/#kontakt">kontakt</NavLink>
                         </li>
-                        <div className={`${style.icons_container}`}>
+                    </ul>
+                    <div className={`${style.icons_container}`}>
                             <a href='https://www.instagram.com/grzecznichlopcy/'>
                                 <img 
                                 className={`${style.instagram_icon}`}
@@ -150,7 +151,6 @@ const Navbar = () => {
                                 />
                             </a>
                         </div>
-                    </ul>
                 </nav>
             </div>
         </>
