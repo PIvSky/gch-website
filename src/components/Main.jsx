@@ -43,7 +43,6 @@ const Main = () => {
                         />
                     </a>
             </div>
-            {/* TODO: change smaller size of photo - resize resolution */}
         </div>
     )
 }

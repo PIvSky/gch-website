@@ -31,24 +31,23 @@ const Contact = () => {
 
         emailjs
         .sendForm(
-            // 'service_jfqmbbc', 
-            // 'template_2uoubuu',
-            // form.current, 
-            // TODO: wyłącz komentarz aby działał mejler
+            'service_jfqmbbc', 
+            'template_2uoubuu',
+            form.current, 
             {
             publicKey: 'ulJtPOUQPTfSAUx5o',
             })
         .then(
             () => {
-            console.log('SUCCESS!');
+                console.log('SUCCESS!');
+                alert('Dziękujemy, Twoja wiadomość została wysłana!');
+                e.target.reset();
             },
             (error) => {
-            console.log('FAILED...', error.text);
+                console.log('FAILED...', error.text);
             },
         );
     };
-    // TODO: czyszczenie formularza po wysłaniu
-    // TODO: pop up po wysłaniu, może być alert albo szybki popup z WebDevSimplify
 
     return (
         <>
