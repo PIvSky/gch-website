@@ -27,6 +27,7 @@ const Music = () => {
         <div className={`${style.music}`} id='muzyka'>
             {video.map((data) => (
                 <VideoTemplate
+                key={data.id}
                 id={data.id}
                 title={data.title}
                 videoId={data.videoId}
