@@ -86,7 +86,7 @@ const Slider = () => {
                     />
                 </button>
                 <span className={`${style.image_name}`}>{carouselImages[imageIndex].name}</span>
-                <img className={`${style.image}`} src={carouselImages[imageIndex].src}/>
+                <img loading="lazy" className={`${style.image}`} src={carouselImages[imageIndex].src} alt='member-photo'/>
                 <button onClick={showNextImage} className={`${style.arrow_next}`}>
                     <img 
                         alt='arrow-next' 
