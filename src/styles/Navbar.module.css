@@ -16,7 +16,7 @@
 
 .title_container {
     padding: 8px 0;
-    position: relative; /* Dodajemy pozycjonowanie względem rodzica */
+    position: relative; 
     top: 15px
 }
 
@@ -26,7 +26,7 @@
     transform: translate(-50%, -50%);
     z-index: 15;
     font-size: 1.5rem;
-    white-space: nowrap; /* Poprawna właściwość dla braku zawijania tekstu */
+    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -98,17 +98,14 @@ ul li:nth-child(3) {
 
 .instagram_icon {
     padding-inline: 10px;
-    /* scale: 0.8; */
 }
 
 .facebook_icon {
     padding-inline: 10px;
-    /* scale: 0.8; */
 }
 
 .youtube_icon {
     padding-inline: 10px;
-    /* scale: 1.1; */
 }
 
 /* 

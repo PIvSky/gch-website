@@ -13,9 +13,30 @@ const Main = () => {
                 alt='main-photo'
             />
             <div className={`${style.icons_container}`}>
-                <a href='https://www.instagram.com/grzecznichlopcy/'><img className={`${style.instagram_icon}`} src={instagram_icon} alt='sm-icon'/></a>
-                <a href='https://www.facebook.com/grzecznichlopcyband'><img className={`${style.facebook_icon}`} src={facebook_icon} alt='sm-icon'/></a>
-                <a href='https://www.youtube.com/@GChProductionPL'><img className={`${style.youtube_icon}`} src={youtube_icon} alt='sm-icon'/></a>
+                <a href='https://www.instagram.com/grzecznichlopcy/'>
+                    <img 
+                        className={`${style.instagram_icon}`} 
+                        src={instagram_icon} 
+                        alt='sm-icon'
+                        width='33px'
+                        />
+                    </a>
+                <a href='https://www.facebook.com/grzecznichlopcyband'>
+                    <img 
+                        className={`${style.facebook_icon}`} 
+                        src={facebook_icon} 
+                        alt='sm-icon'
+                        width='33px'
+                        />
+                    </a>
+                <a href='https://www.youtube.com/@GChProductionPL'>
+                    <img 
+                        className={`${style.youtube_icon}`} 
+                        src={youtube_icon} 
+                        alt='sm-icon'
+                        width='36px'
+                        />
+                    </a>
             </div>
             {/* TODO: change smaller size of photo - resize resolution */}
         </div>
