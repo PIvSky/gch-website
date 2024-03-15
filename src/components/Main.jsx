@@ -19,6 +19,7 @@ const Main = () => {
                         src={instagram_icon} 
                         alt='sm-icon'
                         width='33px'
+                        height='auto'
                         />
                     </a>
                 <a href='https://www.facebook.com/grzecznichlopcyband'>
@@ -27,6 +28,7 @@ const Main = () => {
                         src={facebook_icon} 
                         alt='sm-icon'
                         width='33px'
+                        height='auto'
                         />
                     </a>
                 <a href='https://www.youtube.com/@GChProductionPL'>
@@ -35,6 +37,7 @@ const Main = () => {
                         src={youtube_icon} 
                         alt='sm-icon'
                         width='36px'
+                        height='auto'
                         />
                     </a>
             </div>
