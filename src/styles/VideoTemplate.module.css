@@ -21,7 +21,7 @@
     padding-bottom: 10px;
 }
 
-iframe {
+lite-youtube {
     border: none;
     border-radius: 2rem;
     padding-block: 5px;
@@ -36,9 +36,9 @@ iframe {
         padding-top: 30px;
     }
 
-    iframe {
+    lite-youtube {
         border-radius: 3rem;
         height: 600px;
-        width: 82vw;
+        max-width: 82vw;
     }    
 }
