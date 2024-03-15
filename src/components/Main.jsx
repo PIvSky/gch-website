@@ -11,6 +11,8 @@ const Main = () => {
                 className={`${style.photo}`}
                 src={photo}
                 alt='main-photo'
+                width='375px'
+                height='auto'
             />
             <div className={`${style.icons_container}`}>
                 <a href='https://www.instagram.com/grzecznichlopcy/'>

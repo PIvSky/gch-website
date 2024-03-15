@@ -37,17 +37,15 @@
 .arrow_prev {
     top: 50%;
     left: 10px;
-    scale: 1.2;
 }
 
 .arrow_next {
     top: 50%;
     right: 10px;
-    scale: 1.2;
 }
 
 .arrow_prev:active, .arrow_next:active {
-    scale: 1.5;
+    scale: 1.2;
 }
 
 .left_gallery {

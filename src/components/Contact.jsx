@@ -85,11 +85,21 @@ const Contact = () => {
                     </form>
                     <div className={`${style.contact_data}`}>
                         <div className={`${style.email_container}`}>
-                            <img src={emailIcon}></img>
+                            <img 
+                                src={emailIcon}
+                                alt='email-icon'
+                                width='30px'
+                                height='auto'
+                            />
                             <p>{emailData}</p>
                         </div>
                         <div className={`${style.phone_container}`}>
-                            <img src={phoneIcon}></img>
+                            <img 
+                                src={phoneIcon}
+                                alt='phone-icon'
+                                width='30px'
+                                height='auto'
+                            />
                             {phoneData.map((e, index) =>
                                 <div key={index} className={`${style.phone_person}`}> 
                                     <p className={`${style.person_name}`}>{e.name}</p>

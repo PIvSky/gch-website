@@ -77,10 +77,24 @@ const Slider = () => {
                 ))}
             </div>
             <div className={`${style.image_wrapper}`}>
-                <button onClick={showPrevImage} className={`${style.arrow_prev}`}><img alt='arrow-prev' src={arrowPrev} /></button>
+                <button onClick={showPrevImage} className={`${style.arrow_prev}`}>
+                    <img 
+                        alt='arrow-prev' 
+                        src={arrowPrev}
+                        width='40px'
+                        height='auto'
+                    />
+                </button>
                 <span className={`${style.image_name}`}>{carouselImages[imageIndex].name}</span>
                 <img className={`${style.image}`} src={carouselImages[imageIndex].src}/>
-                <button onClick={showNextImage} className={`${style.arrow_next}`}><img alt='arrow-next' src={arrowNext} /></button>
+                <button onClick={showNextImage} className={`${style.arrow_next}`}>
+                    <img 
+                        alt='arrow-next' 
+                        src={arrowNext}
+                        width='40px'
+                        height='auto'
+                    />
+                </button>
             </div>
             <div className={`${style.right_gallery}`}>
                 <p>{carouselImages[imageIndex].desc}</p>
