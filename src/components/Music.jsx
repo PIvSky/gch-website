@@ -31,7 +31,6 @@ const Music = () => {
                 id={data.id}
                 title={data.title}
                 videoId={data.videoId}
-                src={data.src}
                 backgroundImage={data.backgroundImageStyle}
             />
             ))}
