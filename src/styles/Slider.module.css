@@ -107,10 +107,19 @@
     .right_gallery {
         height: auto;
         display: flex;
+        flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
-        align-items: center;
         }
+
+    .right_gallery p:nth-child(1) {
+        text-align: start;
+        font-size: 23px;
+    }
+
+    .right_gallery p:nth-child(2) {
+        text-align: justify;
+    }
 
     .left_gallery_frame {
         width: 120px;

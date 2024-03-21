@@ -14,27 +14,32 @@ const carouselImages = [
     {
         src: car1,
         name: 'Radek',
-        desc: 'Radosław Mysłek - człowiek pożar, grając tylko lewą ręką na bębnach potrafi podpalić każdy parkiet. W tym czasie drugą wymieni olej w aucie. Gdy był mały, rozkręcał mamie wszystkie zegarki, żeby zobaczyć jak działają (i od tej pory już nie działały).'
+        title: 'Radosław Mysłek',
+        desc: 'człowiek pożar, grając tylko lewą ręką na bębnach potrafi podpalić każdy parkiet. W tym czasie drugą wymieni olej w aucie. Gdy był mały, rozkręcał mamie wszystkie zegarki, żeby zobaczyć jak działają (i od tej pory już nie działały).'
     },
     {
         src: car2,
         name: 'Piotr',
-        desc: 'Piotr Iwański - jego gra, to miód na serce mas słuchających. I nic dziwnego, bo gdy nie łamie serc swoją grą, to jest właścicielem pasieki. Pracowita z niego pszczółka, więc jako operator instrumentów klawiszowych przemierza suche polskie szosy, jako kierowca z programem artystycznym. Bawienie ludzi nigdy go nie nudzi, by być w dobrej formie codziennie się trudzi.'
+        title: 'Piotr Iwański',
+        desc: 'jego gra, to miód na serce mas słuchających. I nic dziwnego, bo gdy nie łamie serc swoją grą, to jest właścicielem pasieki. Pracowita z niego pszczółka, więc jako operator instrumentów klawiszowych przemierza suche polskie szosy, jako kierowca z programem artystycznym. Bawienie ludzi nigdy go nie nudzi, by być w dobrej formie codziennie się trudzi.'
     },
     {
         src: car3,
         name: 'Michał',
-        desc: 'Michał Mościcki - jak na prawdziwego basistę przystało, ma dowcip równie bujny jak brodę. Tańczy za trzech, żartuje za dwóch, a śpiewa jak dwie trzecie prawdziwego wokalisty. Po godzinach dorabia jako rehabilitant kończyn dolnych - jak gra, każdemu nogi same rwą się do tańca.'
+        title: 'Michał Mościcki',
+        desc: 'jak na prawdziwego basistę przystało, ma dowcip równie bujny jak brodę. Tańczy za trzech, żartuje za dwóch, a śpiewa jak dwie trzecie prawdziwego wokalisty. Po godzinach dorabia jako rehabilitant kończyn dolnych - jak gra, każdemu nogi same rwą się do tańca.'
     },
     {
         src: car4,
         name: 'Łukasz',
-        desc: 'Łukasz Jankowski - czuły dżentelmen z niebylejakim zadęciem. Czy dmie we flet, czy w saksofon, nieważne - wszystkim damom w promieniu jednego kursu PKSem przyśpiesza tętno. W każdą solówkę wjeżdża jak tarpan w ściernisko, a na końcu ląduje jak zawodowy pilot LOTu - tak, że wszyscy biją brawo. Była mu pisana kariera lekarza, ale leczy smutasów swoimi frazami.'
+        title: 'Łukasz Jankowski',
+        desc: 'czuły dżentelmen z niebylejakim zadęciem. Czy dmie we flet, czy w saksofon, nieważne - wszystkim damom w promieniu jednego kursu PKSem przyśpiesza tętno. W każdą solówkę wjeżdża jak tarpan w ściernisko, a na końcu ląduje jak zawodowy pilot LOTu - tak, że wszyscy biją brawo. Była mu pisana kariera lekarza, ale leczy smutasów swoimi frazami.'
     },
     {
         src: car5,
         name: 'Grześ',
-        desc: 'Grzegorz Duszak - wujek dobra rada. Gdy mu się pożalisz, powie - nie przejmuj się, bracie, nie cały świat jest o Tobie - cały świat jest o mnie. Jak na prawdziwego wokalistę przystało, gra również na gitarze, a do tego ma pamięć fotogeniczną - zapamiętuje tylko ładnych ludzi (i wciąż nie pamięta, jak nazywa się basista Grzecznych Chłopców). Napisze piosenkę, pożartuje, zagra, zaśpiewa, ugotuje - słowem człowiek renesansu krajowej produkcji.'
+        title: 'Grzegorz Duszak',
+        desc: 'wujek dobra rada. Gdy mu się pożalisz, powie - nie przejmuj się, bracie, nie cały świat jest o Tobie - cały świat jest o mnie. Jak na prawdziwego wokalistę przystało, gra również na gitarze, a do tego ma pamięć fotogeniczną - zapamiętuje tylko ładnych ludzi (i wciąż nie pamięta, jak nazywa się basista Grzecznych Chłopców). Napisze piosenkę, pożartuje, zagra, zaśpiewa, ugotuje - słowem człowiek renesansu krajowej produkcji.'
     }
 ]
 
@@ -97,6 +102,7 @@ const Slider = () => {
                 </button>
             </div>
             <div className={`${style.right_gallery}`}>
+                <p>{carouselImages[imageIndex].title}</p>
                 <p>{carouselImages[imageIndex].desc}</p>
             </div>
         </div>
