@@ -3,6 +3,15 @@ import VideoTemplate from "./VideoTemplate";
 
 const video = [
     {
+        title: "Moje jedyne marzenie - Anna Jantar (Grzeczni Chłopcy BigBit cover)",
+        id: Math.random(),
+        videoId: 'qaOZM_G0BTc',
+        src: 'https://www.youtube.com/embed/qaOZM_G0BTc?si=bXfwTS48eZxev5--" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+        backgroundImageStyle: {
+            backgroundImage: "url('https://i.ytimg.com/vi/qaOZM_G0BTc/hqdefault.jpg')"
+        }
+    },
+    {
         title: "Pokolenie - KOMBII (Grzeczni Chłopcy Cover)",
         id: Math.random(),
         videoId: 'Si6HLWRcrKE',
